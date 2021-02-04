@@ -34,11 +34,11 @@ const App = () => {
         <input
           type="text"
           onChange={onChange}
-          placeholder="Buscar Pokémon"
+          // placeholder="Buscar Pokémon"
           required
         />
-        <label htmlFor="">
-          <span></span>
+        <label htmlFor="busqueda">
+          <span>Buscar Pokémon</span>
         </label>
       </form>
       {datosPokemon.map((data) => {
