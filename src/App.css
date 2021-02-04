@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  outline: none;
+}
+
+body {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+h1 {
+  position: absolute;
+  top: 1rem;
+}
+
+form {
+  position: relative;
+  overflow: hidden;
+  height: 2.5rem;
+}
+
+form input {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+form label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid black;
+}
+
+form label::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid skyblue;
+  transition: transform 0.5s ease;
+  transform: translateX(-100%);
+}
+
+span {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  transition: all 0.5s ease;
+}
+
+form input:focus + label::after,
+form input:valid label::after {
+  transform: translateX(0);
+}
+
+.contenedor {
+  display: flex;
+  opacity: 0.9;
+  justify-content: center;
+  margin-top: 1rem;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.tabla {
+  display: table;
+  max-width: 20em;
+  display: flex;
+  align-items: center;
+}
+
+.fila-tabla {
+  display: table-row;
+}
+
+.celda-tabla {
+  border: 1px solid #999999;
+  display: table-cell;
+  padding: 3px 10px;
+}
+
+.cuerpo {
+  display: table-row-group;
+}
+
+.celda-tabla:nth-child(odd) {
+  background-color: gainsboro;
+}
